@@ -1,65 +1,137 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import Nav from "@/components/Nav";
+import ProjectCard from "@/components/ProjectCard";
+import Section from "@/components/Section";
+import { Button } from "@/components/ui/button";
+import { projects, skills } from "@/data/constants";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen">
+      <Nav />
+      <Hero />
+
+      <div className="border-t border-white/5" />
+
+      <Section
+        id="work"
+        eyebrow="Selected work"
+        title="Projects with real-world constraints"
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          {projects.map((p) => (
+            <ProjectCard key={p.title} {...p} />
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
+          <p className="text-sm text-zinc-300">
+            Want the details? Each project will get a dedicated page later
+            (problem → approach → results). For now, this is the “signal-only”
+            cut.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      <div className="border-t border-white/5" />
+
+      <Section
+        id="about"
+        eyebrow="Background"
+        title="Engineer first. Tasteful UI by default."
+      >
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
+            <p className="text-zinc-300 leading-relaxed">
+              I'm a full-stack software engineer working remotely with an
+              international team on fintech SaaS. I care about clean
+              architecture, predictable systems, and the kind of UI that feels
+              calm and fast.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
+            <p className="text-sm text-zinc-400">Now</p>
+            <p className="mt-2 text-zinc-200">
+              Building production features across payouts, competitions, and
+              dashboards.
+            </p>
+            <p className="mt-4 text-sm text-zinc-400">Previously</p>
+            <p className="mt-2 text-zinc-200">
+              Computer Systems Engineering — FYP in computer vision (YOLO +
+              OCR).
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </Section>
+
+      <div className="border-t border-white/5" />
+
+      <Section id="skills" eyebrow="Toolbox" title="Things I can ship with">
+        <div className="flex flex-wrap gap-2">
+          {skills.map((s) => (
+            <span
+              key={s}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] px-3 py-1.5 text-sm text-zinc-200"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
+      </Section>
+
+      <div className="border-t border-white/5" />
+
+      <Section
+        id="contact"
+        eyebrow="Say hi"
+        title="Let's build something clean and scalable"
+      >
+        <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
+          <p className="text-zinc-300">
+            Best way to reach me: email. I’m open to remote roles, interesting
+            product work, and collaborations.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button asChild className="rounded-2xl">
+              <a href="mailto:syedtaha.hsn@gmail.com">
+                <Mail className="mr-2 h-4 w-4" /> syedtaha.hsn@gmail.com
+              </a>
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-2xl border-white/10 bg-transparent hover:bg-white/5"
+            >
+              <a href="https://github.com/SMTahaWaqar" target="_blank" rel="noreferrer">
+                <Github className="mr-2 h-4 w-4" /> GitHub
+              </a>
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-2xl border-white/10 bg-transparent hover:bg-white/5"
+            >
+              <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+                <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+              </a>
+            </Button>
+          </div>
+        </div>
+      </Section>
+
+      <footer className="border-t border-white/5 py-10">
+        <div className="mx-auto max-w-5xl px-4 text-sm text-zinc-500 flex items-center justify-between">
+          <span>© {new Date().getFullYear()} Taha</span>
+          <span className="hidden md:inline">
+            Built with Next.js • Tailwind • shadcn/ui
+          </span>
+        </div>
+      </footer>
+    </main>
   );
 }
