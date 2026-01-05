@@ -18,10 +18,19 @@ export default function Home() {
         id="work"
         eyebrow="Selected work"
         title="Projects with real-world constraints"
+        align="center"
       >
         <div className="grid gap-4 md:grid-cols-3">
           {projects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
+            <ProjectCard
+              key={p.title}
+              title={p.title}
+              desc={p.desc}
+              tags={p.tags}
+              note={p.note}
+              details={p.details}
+              template={p.template}
+            />
           ))}
         </div>
 
@@ -106,7 +115,11 @@ export default function Home() {
               variant="outline"
               className="rounded-2xl border-white/10 bg-transparent hover:bg-white/5"
             >
-              <a href="https://github.com/SMTahaWaqar" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/SMTahaWaqar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Github className="mr-2 h-4 w-4" /> GitHub
               </a>
             </Button>
@@ -116,7 +129,11 @@ export default function Home() {
               variant="outline"
               className="rounded-2xl border-white/10 bg-transparent hover:bg-white/5"
             >
-              <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/in/syed-muhammad-taha-waqar-736773232/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
               </a>
             </Button>
