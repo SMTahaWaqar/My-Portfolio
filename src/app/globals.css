@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
+}
+
+.dark {
   color-scheme: dark;
 }
 
@@ -10,17 +14,21 @@ html, body {
   height: 100%;
 }
 
+/* Apple-ish light + dark background */
 body {
+  background: #ffffff;
+}
+
+.dark body {
   background: #0b0b0b;
 }
 
-/* for nicer text rendering */
+/* Smooth rendering */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* for smooth scroll for nav links */
 html {
   scroll-behavior: smooth;
 }

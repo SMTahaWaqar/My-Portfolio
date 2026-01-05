@@ -21,7 +21,7 @@ export default function Section({
         <div
           className={isCenter ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}
         >
-          <p className="text-sm text-zinc-400">{eyebrow}</p>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">{eyebrow}</p>
           <h2 className="mt-2 text-2xl md:text-3xl font-semibold tracking-tight">
             {title}
           </h2>

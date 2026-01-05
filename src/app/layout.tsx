@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
+import AppThemeProvider from "@/components/ThemeProvider";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -37,8 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="text-zinc-50">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen transition-colors duration-300">
+        <AppThemeProvider>{children}</AppThemeProvider>
+      </body>
     </html>
   );
 }
