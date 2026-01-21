@@ -29,7 +29,7 @@ export default function ProjectCard({
     <Dialog>
       <DialogTrigger asChild>
         <button className="group block w-full text-left rounded-3xl focus:outline-nonefocus-visible:ring-2 focus-visible:ring-sky-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#0b0b0b]">
-          <Card className="relative h-full overflow-hidden rounded-3xl bg-white border-black/10 dark:bg-white/[0.02] dark:border-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.035]">
+          <Card className="relative h-full overflow-hidden rounded-3xl bg-[#f8f8f8] border-zinc-200 dark:bg-white/[0.02] dark:border-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.035]">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400">
@@ -40,12 +40,12 @@ export default function ProjectCard({
                 </h3>
               </div>
 
-              <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 transition group-hover:text-zinc-900 dark:group-hover:text-zinc-100">
+              <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 transition group-hover:text-black dark:group-hover:text-zinc-100">
                 <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
             </div>
 
-            <p className="mt-3 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+            <p className="mt-3 text-sm text-zinc-800 dark:text-zinc-300 leading-relaxed">
               {desc}
             </p>
 
@@ -54,7 +54,7 @@ export default function ProjectCard({
                 <Badge
                   key={t}
                   variant="secondary"
-                  className="rounded-2xl border border-black/10 bg-white text-zinc-800 dark:border-white/10 dark:bg-white/[0.03] dark:text-zinc-200"
+                  className="rounded-2xl border border-zinc-300 bg-zinc-50 text-zinc-800 dark:border-white/10 dark:bg-white/[0.03] dark:text-zinc-200"
                 >
                   {t}
                 </Badge>
@@ -70,7 +70,7 @@ export default function ProjectCard({
         </button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl border border-black/10 bg-white text-zinc-900 p-6 md:p-8 dark:border-white/10 dark:bg-[#0b0b0b] dark:text-zinc-50">
+      <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl border bg-white text-zinc-900 p-6 md:p-8 dark:border-white/10 dark:bg-[#0b0b0b] dark:text-zinc-50 border-zinc-200 dark:border-zinc-700">
         <DialogHeader>
           <DialogTitle className="text-xl md:text-2xl font-semibold tracking-tight">
             {title}

@@ -6,7 +6,7 @@ function MiniStat({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-2xl border border-black/10 bg-zinc-50 dark:border-white/5 dark:bg-white/[0.02] p-4">
       <p className="text-xs text-zinc-600 dark:text-zinc-400">{label}</p>
-      <p className="mt-1 text-sm text-zinc-200">{value}</p>
+      <p className="mt-1 text-sm dark:text-zinc-200 text-zinc-800">{value}</p>
     </div>
   );
 }
@@ -26,7 +26,7 @@ export default function Hero() {
               Full-Stack Engineer
               <span className={` ${ACCENT}`}> building systems that ship.</span>
             </h1>
-            <p className="mt-5 max-w-2xl text-base md:text-lg text-zinc-300 leading-relaxed">
+            <p className="mt-5 max-w-2xl text-base md:text-lg text-zinc-800 dark:text-zinc-300 leading-relaxed">
               I build production-grade fintech features and AI-driven systems
               with a focus on clean architecture, performance, and a calm,
               reliable UX.
@@ -50,7 +50,7 @@ export default function Hero() {
               <Button
                 asChild
                 variant="ghost"
-                className="rounded-2xl text-zinc-300 hover:text-zinc-50"
+                className="rounded-2xl dark:text-zinc-300 dark:hover:text-zinc-50 hover:text-zinc-600"
               >
                 <a href="mailto:syedtaha.hsn@gmail.com">
                   <Mail className="mr-2 h-4 w-4" /> syedtaha.hsn@gmail.com

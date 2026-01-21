@@ -15,7 +15,7 @@ export default function Home() {
         <Hero />
       </Reveal>
 
-      <div className="border-t border-black/10 dark:border-white/5" />
+      <div className="border-t border-zinc-200 dark:border-zinc-700" />
 
       <Reveal delay={80}>
         <Section
@@ -37,8 +37,8 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-3xl border bg-white border-black/10 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
-            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+          <div className="mt-10 rounded-3xl border bg-[#f8f8f8] border-zinc-200 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
+            <p className="text-zinc-800 dark:text-zinc-300 leading-relaxed">
               Want the details? Each project will get a dedicated page later
               (problem → approach → results). For now, this is the “signal-only”
               cut.
@@ -47,7 +47,7 @@ export default function Home() {
         </Section>
       </Reveal>
 
-      <div className="border-t border-black/10 dark:border-white/5" />
+      <div className="border-t border-zinc-200 dark:border-zinc-700" />
 
       <Reveal delay={80}>
         <Section
@@ -56,8 +56,8 @@ export default function Home() {
           title="Engineer first. Tasteful UI by default."
         >
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border bg-white border-black/10 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
-              <p className="text-zinc-300 leading-relaxed">
+            <div className="rounded-3xl border bg-[#f8f8f8] border-zinc-200 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
+              <p className="text-zinc-800 dark:text-zinc-200 leading-relaxed">
                 I'm a full-stack software engineer working remotely with an
                 international team on fintech SaaS. I care about clean
                 architecture, predictable systems, and the kind of UI that feels
@@ -65,7 +65,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-3xl border bg-white border-black/10 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
+            <div className="rounded-3xl border bg-[#f8f8f8] border-zinc-200 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
               <p className="text-sm text-zinc-600 dark:text-zinc-400">Now</p>
               <p className="mt-2 text-zinc-800 dark:text-zinc-200">
                 Building production features across payouts, competitions, and
@@ -83,7 +83,7 @@ export default function Home() {
         </Section>
       </Reveal>
 
-      <div className="border-t border-black/10 dark:border-white/5" />
+      <div className="border-t border-zinc-200 dark:border-zinc-700" />
 
       <Reveal delay={80}>
         <Section id="skills" eyebrow="Toolbox" title="Things I can ship with">
@@ -100,7 +100,7 @@ export default function Home() {
         </Section>
       </Reveal>
 
-      <div className="border-t border-black/10 dark:border-white/5" />
+      <div className="border-t border-zinc-200 dark:border-zinc-700" />
 
       <Reveal delay={80}>
         <Section
@@ -108,8 +108,8 @@ export default function Home() {
           eyebrow="Say hi"
           title="Let's build something clean and scalable"
         >
-          <div className="rounded-3xl border bg-white border-black/10 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
-            <p className="text-zinc-700 dark:text-zinc-300">
+          <div className="rounded-3xl border bg-[#f8f8f8] border-zinc-200 dark:bg-white/[0.02] dark:border-white/5 p-6 md:p-8">
+            <p className="text-zinc-800 dark:text-zinc-300">
               Best way to reach me: email. I’m open to remote roles, interesting
               product work, and collaborations.
             </p>
@@ -153,7 +153,7 @@ export default function Home() {
         </Section>
       </Reveal>
 
-      <footer className="border-t border-black/10 dark:border-white/5 py-10">
+      <footer className="border-t border-zinc-200 dark:border-zinc-700 py-10">
         <div className="mx-auto max-w-5xl px-4 text-sm text-zinc-500 flex items-center justify-between">
           <span>© {new Date().getFullYear()} Taha</span>
           <span className="hidden md:inline">

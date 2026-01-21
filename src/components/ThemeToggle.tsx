@@ -19,7 +19,7 @@ export default function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="rounded-2xl text-zinc-700 hover:text-zinc-900 hover:bg-black/5
+      className="rounded-2xl text-zinc-800 hover:text-black hover:bg-black/5
                  dark:text-zinc-300 dark:hover:text-zinc-50 dark:hover:bg-white/5"
       aria-label="Toggle theme"
     >

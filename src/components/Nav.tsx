@@ -11,16 +11,16 @@ export default function Nav() {
         </a>
 
         <nav className="hidden md:flex items-center gap-7 text-sm text-zinc-600 dark:text-zinc-400">
-          <a className="hover:text-zinc-900 dark:hover:text-zinc-50 transition" href="#work">
+          <a className="hover:text-black dark:hover:text-zinc-50 transition" href="#work">
             Work
           </a>
-          <a className="hover:text-zinc-900 dark:hover:text-zinc-50 transition" href="#about">
+          <a className="hover:text-black dark:hover:text-zinc-50 transition" href="#about">
             About
           </a>
-          <a className="hover:text-zinc-900 dark:hover:text-zinc-50 transition" href="#skills">
+          <a className="hover:text-black dark:hover:text-zinc-50 transition" href="#skills">
             Skills
           </a>
-          <a className="hover:text-zinc-900 dark:hover:text-zinc-50 transition" href="#contact">
+          <a className="hover:text-black dark:hover:text-zinc-50 transition" href="#contact">
             Contact
           </a>
         </nav>
@@ -31,7 +31,7 @@ export default function Nav() {
             asChild
             variant="ghost"
             size="icon"
-            className="text-zinc-700 hover:text-zinc-900 hover:bg-black/5 dark:text-zinc-300 dark:hover:text-zinc-50 dark:hover:bg-white/5"
+            className="text-zinc-800 hover:text-black hover:bg-black/5 dark:text-zinc-300 dark:hover:text-zinc-50 dark:hover:bg-white/5"
 
           >
             <a
@@ -47,7 +47,7 @@ export default function Nav() {
             asChild
             variant="ghost"
             size="icon"
-            className="text-zinc-700 hover:text-zinc-900 hover:bg-black/5 dark:text-zinc-300 dark:hover:text-zinc-50 dark:hover:bg-white/5"
+            className="text-zinc-800 hover:text-black hover:bg-black/5 dark:text-zinc-300 dark:hover:text-zinc-50 dark:hover:bg-white/5"
 
           >
             <a
